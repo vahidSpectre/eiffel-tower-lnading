@@ -1,0 +1,78 @@
+:root {
+  --color-orange-1: #f35950;
+
+  --color-grey-1: #262626;
+}
+@font-face {
+  font-family: robotoBlack;
+  src: url(../public/assets/fonts/RobotoSlabBlack-d9xgK.ttf);
+}
+@font-face {
+  font-family: robotoBold;
+  src: url(../public/assets/fonts/RobotoSlabBold-PKGJr.ttf);
+}
+@font-face {
+  font-family: robotoLight;
+  src: url(../public/assets/fonts/RobotoSlabLight-7Br0P.ttf);
+}
+@font-face {
+  font-family: robotoMedium;
+  src: url(../public/assets/fonts/RobotoSlabMedium-vmAEA.ttf);
+}
+@font-face {
+  font-family: robotoRegular;
+  src: url(../public/assets/fonts/RobotoSlabRegular-w1GE3.ttf);
+}
+@font-face {
+  font-family: robotoThin;
+  src: url(../public/assets/fonts/RobotoSlabThin-mL1XP.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: robotoRegular, serif;
+  font-weight: 100;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  white-space: nowrap;
+}
+@media screen and (min-width: 1441px) {
+  * {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  * {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}

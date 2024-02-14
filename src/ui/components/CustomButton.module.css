@@ -1,0 +1,31 @@
+.button {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(
+    to right,
+    rgba(219, 64, 68, 0.9),
+    rgba(236, 104, 81, 0.9)
+  );
+  border-radius: 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  cursor: pointer;
+  transition: all 0.2;
+  font-size: 16px ;
+}
+.button_border {
+  border: 2px solid rgba(236, 104, 81, 0.9);
+}
+.button::before {
+  content: "\276F";
+  margin-right: 0.5rem;
+}
+.button:hover {
+  background: white;
+  color: #000000;
+}
+.button:hover::before {
+  color: var(--color-orange-1);
+}

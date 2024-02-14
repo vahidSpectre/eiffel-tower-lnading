@@ -1,0 +1,128 @@
+.hero_text_container {
+  width: fit-content;
+  position: absolute;
+  bottom: 60%;
+  left: 56%;
+  transform: translate(-50%, 50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+.hero_text_container > * {
+  margin: 0.4rem 0rem;
+}
+.main_hero_wrapper {
+  max-width: 100%;
+  min-height: fit-content !important;
+  position: relative;
+  overflow: hidden;
+}
+.player {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.timingContainer {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  max-width: 100%;
+  z-index: 1000;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: blueviolet;
+}
+.timingContainer > * {
+  padding: 1rem;
+  margin: 0.2rem;
+}
+.timing_text {
+  width: 50%;
+}
+.timing_secondary {
+  width: 12.5%;
+  display: flex;
+  position: relative;
+}
+.timing_secondary::after {
+  content: "\276F";
+  position: absolute;
+  right: 6%;
+  color: var(--color-orange-1);
+}
+@media screen and (min-width: 1441px) {
+  .player {
+    transform-origin: right;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main_hero_wrapper {
+    height: fit-content;
+  }
+  .timingContainer {
+    top: 0;
+    /* transform: translateY(100%); */
+  }
+}
+@media screen and (max-width: 1024px) {
+  .player {
+    transform: scale(1.1);
+    transform-origin: right;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main_hero_wrapper {
+    height: 50%;
+  }
+  .timingContainer {
+    top: 0;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_text_container {
+    bottom: 60%;
+    left: 50%;
+    transform: translate(0px, 0px);
+    padding: 0.5rem;
+  }
+  .hero_text_container > * {
+    margin: 0.2rem 0rem;
+  }
+  .player {
+    transform-origin: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .main_hero_wrapper {
+    height: 70vh;
+  }
+  .timingContainer {
+    flex-direction: column;
+    top: 0%;
+    transform: translateY(-10%);
+  }
+  .timingContainer > * {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero_text_container {
+    bottom: 0%;
+    left: 0%;
+    transform: translate(0px, 0px);
+    padding: 1rem;
+  }
+  .player {
+    transform-origin: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
