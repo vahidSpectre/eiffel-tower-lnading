@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/eiffel-tower-lnading/static/css/main.da00c4a9.css",
+    "main.js": "/eiffel-tower-lnading/static/js/main.f4a9746f.js",
+    "static/js/592.eb4db3d8.chunk.js": "/eiffel-tower-lnading/static/js/592.eb4db3d8.chunk.js",
+    "static/media/RobotoSlabBlack-d9xgK.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabBlack-d9xgK.00f5cd43b52046f3e3e2.ttf",
+    "static/media/RobotoSlabMedium-vmAEA.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabMedium-vmAEA.1f2aa80f25d5cfe37a2d.ttf",
+    "static/media/RobotoSlabBold-PKGJr.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabBold-PKGJr.3fa1df0eaa91e1d96ec4.ttf",
+    "static/media/RobotoSlabLight-7Br0P.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabLight-7Br0P.cc20b6b93799a7acad78.ttf",
+    "static/media/RobotoSlabRegular-w1GE3.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabRegular-w1GE3.9cba9777921537b02730.ttf",
+    "static/media/RobotoSlabThin-mL1XP.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabThin-mL1XP.e6d52625c2408c78ac2d.ttf",
+    "index.html": "/eiffel-tower-lnading/index.html",
+    "main.da00c4a9.css.map": "/eiffel-tower-lnading/static/css/main.da00c4a9.css.map",
+    "main.f4a9746f.js.map": "/eiffel-tower-lnading/static/js/main.f4a9746f.js.map",
+    "592.eb4db3d8.chunk.js.map": "/eiffel-tower-lnading/static/js/592.eb4db3d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da00c4a9.css",
+    "static/js/main.f4a9746f.js"
+  ]
+}
