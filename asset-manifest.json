@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eiffel-tower-lnading/static/css/main.13c6ab4e.css",
-    "main.js": "/eiffel-tower-lnading/static/js/main.ad70c009.js",
+    "main.js": "/eiffel-tower-lnading/static/js/main.9cd474e5.js",
     "static/js/592.eb4db3d8.chunk.js": "/eiffel-tower-lnading/static/js/592.eb4db3d8.chunk.js",
     "static/media/RobotoSlabBlack-d9xgK.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabBlack-d9xgK.00f5cd43b52046f3e3e2.ttf",
     "static/media/RobotoSlabMedium-vmAEA.ttf": "/eiffel-tower-lnading/static/media/RobotoSlabMedium-vmAEA.1f2aa80f25d5cfe37a2d.ttf",
@@ -12,11 +12,11 @@
     "static/media/home-dontmiss-bg.jpg": "/eiffel-tower-lnading/static/media/home-dontmiss-bg.c649aea314daffcda517.jpg",
     "index.html": "/eiffel-tower-lnading/index.html",
     "main.13c6ab4e.css.map": "/eiffel-tower-lnading/static/css/main.13c6ab4e.css.map",
-    "main.ad70c009.js.map": "/eiffel-tower-lnading/static/js/main.ad70c009.js.map",
+    "main.9cd474e5.js.map": "/eiffel-tower-lnading/static/js/main.9cd474e5.js.map",
     "592.eb4db3d8.chunk.js.map": "/eiffel-tower-lnading/static/js/592.eb4db3d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13c6ab4e.css",
-    "static/js/main.ad70c009.js"
+    "static/js/main.9cd474e5.js"
   ]
 }
