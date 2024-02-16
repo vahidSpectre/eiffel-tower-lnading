@@ -1,0 +1,45 @@
+.wrapper{
+    max-width: inherit;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.image_container{
+   border-radius: 5px;
+    overflow: hidden;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    padding: 1.5rem 1rem 1rem 1rem;
+    font-size: large;
+    font-family: robotoLight;
+}
+.caption{
+    padding:0rem 1rem 3rem 1rem;
+    font-size: large;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper{
+    flex-direction: row;
+    
+  }
+  .title{
+    padding: 1.5rem 1rem 1rem 3rem;
+}
+.caption{
+        padding:0rem 1rem 3rem 2rem;
+}
+}

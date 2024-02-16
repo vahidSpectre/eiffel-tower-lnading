@@ -1,7 +1,11 @@
 :root {
   --color-orange-1: #f35950;
 
-  --color-grey-1: #262626;
+  --color-grey-1: #212121;
+  --color-pink-1: #f0f0f0;
+  --color-pink-2: #e7e7e7;
+
+  --max-width: 1200px;
 }
 @font-face {
   font-family: robotoBlack;
@@ -31,8 +35,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: robotoRegular, serif;
-  font-weight: 100;
 }
 h1,
 h2,
@@ -41,6 +43,8 @@ h4,
 h5,
 h6 {
   white-space: nowrap;
+  font-family: robotoRegular, serif;
+  font-weight: 100;
 }
 @media screen and (min-width: 1441px) {
   * {

@@ -4,5 +4,21 @@
   color: #ffffff;
   font-weight: 100;
   font-size: medium;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.8rem 1.2rem;
+  margin: 0.2rem;
+  cursor: pointer;
 }
-
+.arrow::after {
+  content: "\276F";
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-orange-1);
+}
+.title {
+  margin-bottom: 1rem;
+}

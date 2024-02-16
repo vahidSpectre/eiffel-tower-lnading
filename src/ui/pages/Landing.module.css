@@ -14,9 +14,10 @@
 }
 .main_hero_wrapper {
   max-width: 100%;
-  min-height: fit-content !important;
+  height: fit-content;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0px -10px 30px 10px black;
 }
 .player {
   width: 100%;
@@ -27,15 +28,9 @@
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  max-width: 100%;
   z-index: 1000;
   top: 0;
   transform: translateY(-50%);
-  background-color: blueviolet;
-}
-.timingContainer > * {
-  padding: 1rem;
-  margin: 0.2rem;
 }
 .timing_text {
   width: 50%;
@@ -45,12 +40,29 @@
   display: flex;
   position: relative;
 }
-.timing_secondary::after {
-  content: "\276F";
-  position: absolute;
-  right: 6%;
-  color: var(--color-orange-1);
+.dontmiss_container {
+  background: url(../../../public/assets/images/home-dontmiss-bg.jpg) no-repeat
+    0 0;
+  background-size: cover;
+  padding: 3rem 0;
 }
+.thumnail_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.thumnail {
+  width: 30%;
+}
+.youare_container {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
 @media screen and (min-width: 1441px) {
   .player {
     transform-origin: right;
@@ -78,6 +90,14 @@
     top: 0;
     transform: translateY(-50%);
   }
+  .thumnail_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .thumnail {
+    width: 90%;
+    margin-bottom: 4rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero_text_container {
@@ -101,12 +121,16 @@
     height: 70vh;
   }
   .timingContainer {
-    flex-direction: column;
+    flex-direction: column ;
     top: 0%;
     transform: translateY(-10%);
   }
   .timingContainer > * {
     width: 100%;
+  }
+  .youare_container{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 600px) {
@@ -123,5 +147,9 @@
     top: 0;
     left: 0;
     object-fit: cover;
+  }
+  .youare_container{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
   }
 }
