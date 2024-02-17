@@ -7,10 +7,11 @@ import CustomButton from "../components/CustomButton";
 import data from "../../data/data.json";
 import Section from "../components/Section";
 import SimpleSvg from "../components/SimpleSvg";
+import Svg from "../components/Svg";
 const Footer = () => {
   return (
     <footer>
-      <div
+      <section
         className={`${classes.footer_top} ${classes.color_black} ${classes.text_white}`}
       >
         <UnderlinkedText text={"Book a ticket"} />
@@ -19,8 +20,8 @@ const Footer = () => {
           <p>Save time, buy your tickets online</p>
           <CustomButton text={"Buy a ticket"} />
         </Section>
-      </div>
-      <div
+      </section>
+      <section
         className={`${classes.copy_right} ${classes.color_grey} ${classes.text_grey}`}
       >
         <span className={classes.image_container}>
@@ -37,11 +38,9 @@ const Footer = () => {
         <p className={classes.own}>
           A website owned by Sociéte d'Exploitation de la tour Eiffel
         </p>
-      </div>
-      <div className={classes.color_black}>
-        <Section
-          className={`${classes.svgs} ${classes.text_white}`}
-        >
+      </section>
+      <section className={`${classes.svgs_container} ${classes.color_black}`}>
+        <Section className={`${classes.svgs} ${classes.text_white}`}>
           <SimpleSvg
             src={data.footer_svgs.access_map.src}
             title={data.footer_svgs.access_map.title}
@@ -79,12 +78,30 @@ const Footer = () => {
             title={data.footer_svgs.sete.title}
           />
         </Section>
-      </div>
-      <div
+      </section>
+      <section
         className={`${classes.info} ${classes.color_grey} ${classes.text_grey}`}
       >
-        asd
-      </div>
+        <Section className={classes.bottom_content}>
+          <img className={classes.paris_svg} src={data.footer_svgs.paris.src} alt="" />
+          <p>-</p>
+          <h2>Legal information</h2>
+          <p>-</p>
+          <h2>Data protection policy</h2>
+          <p>-</p>
+          <h2>Cookies</h2>
+          <p>-</p>
+          <h2>Credits</h2>
+        </Section>
+        <p>Follow us on</p>
+        <Section className={classes.social_meida}>
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.facebook.src}/>
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.x.src}/>
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.linkedin.src}/>
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.youtube.src}/>
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.instagram.src}/>
+        </Section>
+      </section>
     </footer>
   );
 };

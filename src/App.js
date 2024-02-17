@@ -1,11 +1,56 @@
-import './App.css';
-import Landing from './ui/pages/Landing';
+import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
+import "./App.css";
+const Landing = lazy(() => import("./ui/pages/Landing"));
+const Discover = lazy(() => import("../src/ui/pages/Discover"));
+const Events = lazy(() => import("../src/ui/pages/Events"));
+const News = lazy(() => import("../src/ui/pages/News"));
+const Photos = lazy(() => import("../src/ui/pages/Photos"));
 function App() {
   return (
-    <div className="App">
-    <Landing/>
-    </div>
+    <Routes className="App">
+      <Route
+        path="/"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <Landing />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/discover"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <Discover />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/events"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <Events />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/news"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <News />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/photos"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <Photos />
+          </Suspense>
+        }
+      />
+    </Routes>
   );
 }
 

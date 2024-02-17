@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../layout/Header";
 import CustomButton from "../components/CustomButton";
 
@@ -10,12 +10,31 @@ import Thumnail from "../components/Thumnail";
 import Svg from "../components/Svg";
 import data from "../../data/data.json";
 import Footer from "../layout/Footer";
+import { Navigate, useNavigate } from "react-router-dom";
 const Landing = () => {
+  const [loadingVideo, setLoadingVideo] = useState(true);
+
+  const navigate = useNavigate();
   return (
     <div className={classes.main_container}>
       <Header />
       <section className={classes.main_hero_wrapper}>
-        <video className={classes.player} autoPlay loop muted>
+        <img
+          className={`${classes.background_cover} ${
+            loadingVideo ? classes.visible : classes.hidden
+          }`}
+          src={data.background_cover}
+          alt="Eiffel Tower image"
+        />
+        <video
+          className={`${classes.player} 
+            ${!loadingVideo ? classes.visible : classes.hidden}
+            `}
+          autoPlay
+          loop
+          muted
+          onLoadedData={() => setLoadingVideo(false)}
+        >
           <source src={data.hero_video} type="video/mp4" />
         </video>
         <span className={classes.hero_text_container}>
@@ -24,7 +43,6 @@ const Landing = () => {
           <CustomButton text={"Buy a Ticket"} />
         </span>
       </section>
-
       <Section className={classes.timingContainer}>
         <HeroTimeingWrapper
           className={classes.timing_text}
@@ -57,12 +75,27 @@ const Landing = () => {
 
       <Section className={classes.events}>
         <UnderlinkedText text={"Events at the Tower"} />
+        <CustomButton
+          text={"View all Events"}
+          border={true}
+          onClick={() => navigate("/events")}
+        />
+        <CustomButton
+          text={"Discover the Eiffel Tower"}
+          border={true}
+          onClick={() => navigate("/discover")}
+        />
       </Section>
       <Section className={classes.now}>
         <UnderlinkedText text={"Now at the Tower"} />
       </Section>
       <Section className={classes.news}>
         <UnderlinkedText text={"News"} />
+        <CustomButton
+          text={"See all news"}
+          border={true}
+          onClick={() => navigate("/news")}
+        />
       </Section>
       <Section
         className={classes.dontmiss}
@@ -95,43 +128,57 @@ const Landing = () => {
         <div className={classes.youare_container}>
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
             }
             caption={"Family"}
+            border={true}
           />
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
             }
             caption={"Professional in the Tourism Industry"}
+            border={true}
           />
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
             }
             caption={"A business"}
+            border={true}
           />
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
             }
             caption={"Teachers"}
+            border={true}
           />
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
             }
             caption={"Visitors with disabilities"}
+            border={true}
           />
           <Svg
             src={
-              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
+              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
             }
             caption={"A journalist"}
+            border={true}
           />
         </div>
       </Section>
-      <Footer/>
+      <Section>
+        <UnderlinkedText text={"The Eiffel Tower on social media"} />
+        <CustomButton
+          text={`   See more photos    `}
+          border={true}
+          onClick={() => navigate("/photos")}
+        />
+      </Section>
+      <Footer />
     </div>
   );
 };

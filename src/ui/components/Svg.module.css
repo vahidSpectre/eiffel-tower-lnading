@@ -6,17 +6,20 @@
   align-items: center;
   margin: 0 auto;
   transition: all .25s ease-in-out;
+  cursor: pointer;
 }
 .image_wrapper {
   width: 60%;
   aspect-ratio: 1;
   background-color: var(--color-pink-1);
-  border: 2px solid var(--color-pink-2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+}
+.border{
+    border: 2px solid var(--color-pink-2);
 }
 .image {
   width: 60%;
@@ -33,14 +36,11 @@
     width: 65%;
   }
   .image_wrapper{
-    width: 60%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
   .wrapper {
     width: 65%;
-  }
-  .image_wrapper{
-    width: 50%;
   }
 }

@@ -45,3 +45,17 @@
     padding: 0rem 1rem 3rem 2rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .image_container {
+    max-width: 100%;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .title {
+    padding: 1.5rem 1rem 1rem 3rem;
+  }
+  .caption {
+    padding: 0rem 1rem 3rem 2rem;
+  }
+}

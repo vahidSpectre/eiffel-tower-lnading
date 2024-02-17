@@ -1,16 +1,21 @@
-.text {
+.text_wrapper {
   font-size: x-large;
   font-family: robotoRegular;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2.5rem 0;
+  width: 100%;
+  height: fit-content;
 }
-.text::after {
+.text{
+  max-width: 250px;
+  text-align: center;
+}
+.text_wrapper::after {
   content: "";
   height: 2px;
   width: 4rem;
   background-color: var(--color-orange-1);
   margin-top: .5rem;
-
 }
