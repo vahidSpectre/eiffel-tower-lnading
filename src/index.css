@@ -1,7 +1,8 @@
 :root {
   --color-orange-1: #f35950;
-
   --color-grey-1: #212121;
+  --color-grey-2: #222222;
+  --color-grey-3: #555;
   --color-pink-1: #f0f0f0;
   --color-pink-2: #e7e7e7;
 
@@ -35,6 +36,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.25s ease-out;
 }
 h1,
 h2,

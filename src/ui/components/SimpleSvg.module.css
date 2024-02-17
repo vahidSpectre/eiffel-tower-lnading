@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  /* background-color: red; */
+}
+.wrapper:hover {
+  opacity: 0.5;
+}
+.image_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+.title {
+  font-size: medium;
+  text-align: center;
+}

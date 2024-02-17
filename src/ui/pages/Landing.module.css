@@ -22,7 +22,6 @@
 .player {
   width: 100%;
   transform: scale(1);
-  transition: all 0.5s ease-in-out;
 }
 .timingContainer {
   display: flex;
@@ -49,6 +48,7 @@
 .thumnail_container {
   display: flex;
   justify-content: space-evenly;
+  margin:0 2rem;
 }
 .thumnail {
   width: 30%;
@@ -58,7 +58,7 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
@@ -93,6 +93,8 @@
   .thumnail_container {
     flex-direction: column;
     align-items: center;
+      margin:0;
+
   }
   .thumnail {
     width: 90%;
@@ -121,21 +123,21 @@
     height: 70vh;
   }
   .timingContainer {
-    flex-direction: column ;
+    flex-direction: column;
     top: 0%;
     transform: translateY(-10%);
   }
   .timingContainer > * {
     width: 100%;
   }
-  .youare_container{
+  .youare_container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 600px) {
   .hero_text_container {
-    bottom: 0%;
+    bottom: 5%;
     left: 0%;
     transform: translate(0px, 0px);
     padding: 1rem;
@@ -148,8 +150,8 @@
     left: 0;
     object-fit: cover;
   }
-  .youare_container{
+  .youare_container {
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
   }
 }

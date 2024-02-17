@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../layout/Header";
 import CustomButton from "../components/CustomButton";
-import Wrapper from "../components/Wrapper";
 
 import classes from "./Landing.module.css";
 import UnderlinkedText from "../components/UnderlinedText";
@@ -9,18 +8,15 @@ import HeroTimeingWrapper from "../components/HeroTimeingWrapper";
 import Section from "../components/Section";
 import Thumnail from "../components/Thumnail";
 import Svg from "../components/Svg";
+import data from "../../data/data.json";
+import Footer from "../layout/Footer";
 const Landing = () => {
   return (
     <div className={classes.main_container}>
       <Header />
       <section className={classes.main_hero_wrapper}>
         <video className={classes.player} autoPlay loop muted>
-          <source
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/video/tour-eiffel-timelapse-jour-nuit-recadre.mp4"
-            }
-            type="video/mp4"
-          />
+          <source src={data.hero_video} type="video/mp4" />
         </video>
         <span className={classes.hero_text_container}>
           <h1>The Eiffel Tower</h1>
@@ -76,33 +72,21 @@ const Landing = () => {
         <div className={classes.thumnail_container}>
           <Thumnail
             className={classes.thumnail}
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/le-monument-thumbnail.jpg"
-            }
-            title={"The Tower"}
-            caption={
-              " History, key figures, lights, paintings, explore all the secrets of the world's most iconic monument"
-            }
+            src={data.thumnails.thumnail_1.image}
+            title={data.thumnails.thumnail_1.title}
+            caption={data.thumnails.thumnail_1.caption}
           />
           <Thumnail
             className={classes.thumnail}
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/retaurants-boutiques-thumbnail.jpg"
-            }
-            title={"The Tower"}
-            caption={
-              " History, key figures, lights, paintings, explore all the secrets of the world's most iconic monument"
-            }
+            src={data.thumnails.thumnail_2.image}
+            title={data.thumnails.thumnail_2.title}
+            caption={data.thumnails.thumnail_2.caption}
           />
           <Thumnail
             className={classes.thumnail}
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/le-salon-gustave-eiffel-thumbnail.jpg"
-            }
-            title={"The Tower"}
-            caption={
-              " History, key figures, lights, paintings, explore all the secrets of the world's most iconic monument"
-            }
+            src={data.thumnails.thumnail_3.image}
+            title={data.thumnails.thumnail_3.title}
+            caption={data.thumnails.thumnail_3.caption}
           />
         </div>
       </Section>
@@ -111,42 +95,43 @@ const Landing = () => {
         <div className={classes.youare_container}>
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
             }
             caption={"Family"}
           />
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
             }
             caption={"Professional in the Tourism Industry"}
           />
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
             }
             caption={"A business"}
           />
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
             }
             caption={"Teachers"}
           />
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
             }
             caption={"Visitors with disabilities"}
           />
           <Svg
             src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
+              "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
             }
             caption={"A journalist"}
           />
         </div>
       </Section>
+      <Footer/>
     </div>
   );
 };

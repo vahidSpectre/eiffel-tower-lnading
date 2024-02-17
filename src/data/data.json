@@ -1,0 +1,64 @@
+{
+  "hero_video": "http://localhost:3000/eiffel-tower-lnading/assets/video/tour-eiffel-timelapse-jour-nuit-recadre.mp4",
+  
+  "today": { "first": "lorem", "second": "lorem2" },
+
+  "thumnails": {
+    "thumnail_1": {
+      "title": "The Tower",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/le-monument-thumbnail.jpg",
+      "caption": " History, key figures, lights, paintings, explore all the secrets of the world's most iconic monument"
+    },
+    "thumnail_2": {
+      "title": "Restaurants & stores",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/retaurants-boutiques-thumbnail.jpg",
+      "caption": "On every floor, the Eiffel Tower has a range of dining and gift-shop options."
+    },
+    "thumnail_3": {
+      "title": "The Gustave Eiffel Salon",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/le-salon-gustave-eiffel-thumbnail.jpg",
+      "caption": "For your business events, hire a new venue in a magical setting. Fully equipped to meet all of your needs."
+    }
+  },
+
+  "footer_svgs": {
+    "clock": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/clock.svg",
+    "tower": "http://localhost:3000/eiffel-tower-lnading/assets/images/tour-eiffel-icon-w.svg",
+    "access_map": {
+      "title": "Access map",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/access-map.svg"
+    },
+    "contact": {
+      "title": "Contact",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/contact.svg"
+    },
+    "faq": {
+      "title": "FAQ",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/faq.svg"
+    },
+    "jobs": {
+      "title": "Jobs",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/jobs.svg"
+    },
+    "press": {
+      "title": "Press",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/press.svg"
+    },
+    "companies": {
+      "title": "Companies",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/companies.svg"
+    },
+    "schools": {
+      "title": "Schools",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/teacher.svg"
+    },
+    "industry": {
+      "title": "Professionals in the Tourism Industry",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/turism.svg"
+    },
+    "sete": {
+      "title": "SETE",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/sete.svg"
+    }
+  }
+}
