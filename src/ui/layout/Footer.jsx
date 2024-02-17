@@ -34,21 +34,52 @@ const Footer = () => {
           <span className={classes.text_white}>TOUREIFFEL.PARIS</span> THE
           OFFICIAL WEBSITE OF THE EIFFEL TOWER
         </p>
-        <p className={classes.own}>A website owned by Sociéte d'Exploitation de la tour Eiffel</p>
+        <p className={classes.own}>
+          A website owned by Sociéte d'Exploitation de la tour Eiffel
+        </p>
       </div>
-      <Section
-        className={`${classes.svgs} ${classes.color_black} ${classes.text_white}`}
-      >
-        <SimpleSvg src={data.footer_svgs.access_map.src} title={data.footer_svgs.access_map.title}/>
-        <SimpleSvg src={data.footer_svgs.contact.src} title={data.footer_svgs.contact.title}/>
-        <SimpleSvg src={data.footer_svgs.faq.src} title={data.footer_svgs.faq.title}/>
-        <SimpleSvg src={data.footer_svgs.jobs.src} title={data.footer_svgs.jobs.title}/>
-        <SimpleSvg src={data.footer_svgs.press.src} title={data.footer_svgs.press.title}/>
-        <SimpleSvg src={data.footer_svgs.companies.src} title={data.footer_svgs.companies.title}/>
-        <SimpleSvg src={data.footer_svgs.schools.src} title={data.footer_svgs.schools.title}/>
-        <SimpleSvg src={data.footer_svgs.industry.src} title={data.footer_svgs.industry.title}/>
-        <SimpleSvg src={data.footer_svgs.sete.src} title={data.footer_svgs.sete.title}/>
-      </Section>
+      <div className={classes.color_black}>
+        <Section
+          className={`${classes.svgs} ${classes.text_white}`}
+        >
+          <SimpleSvg
+            src={data.footer_svgs.access_map.src}
+            title={data.footer_svgs.access_map.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.contact.src}
+            title={data.footer_svgs.contact.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.faq.src}
+            title={data.footer_svgs.faq.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.jobs.src}
+            title={data.footer_svgs.jobs.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.press.src}
+            title={data.footer_svgs.press.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.companies.src}
+            title={data.footer_svgs.companies.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.schools.src}
+            title={data.footer_svgs.schools.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.industry.src}
+            title={data.footer_svgs.industry.title}
+          />
+          <SimpleSvg
+            src={data.footer_svgs.sete.src}
+            title={data.footer_svgs.sete.title}
+          />
+        </Section>
+      </div>
       <div
         className={`${classes.info} ${classes.color_grey} ${classes.text_grey}`}
       >
