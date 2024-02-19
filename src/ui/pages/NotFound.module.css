@@ -1,0 +1,54 @@
+* {
+  transition: all 0s !important;
+}
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.text_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ops_text,
+.error_text {
+  font-size: 60px;
+}
+.state_code {
+  font-size: 150px;
+  font-family: robotoBold;
+  color: red;
+}
+.not_found {
+  font-size: 30px;
+  height: 3rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.buttons > * {
+  margin: 0rem 1rem;
+}
+@media screen and (max-width: 320px) {
+  .error_text,
+  .ops_text {
+    font-size: 40px;
+  }
+  .state_code {
+    font-size: 100px;
+  }
+  .not_found {
+    font-size: 20px;
+  }
+  .buttons > * {
+    font-size: small;
+  }
+}

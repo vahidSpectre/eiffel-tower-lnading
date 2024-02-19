@@ -2,13 +2,11 @@ import React from 'react'
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
 
+import classes from './Events.module.css'
 const Events = () => {
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Header />
-      <div
-        style={{ height: "100rem", backgroundColor: "rgba(200,200,200.0.5)" }}
-      />
       <Footer />
     </div>
   );

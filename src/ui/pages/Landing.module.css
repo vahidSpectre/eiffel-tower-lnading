@@ -47,6 +47,58 @@
   display: flex;
   position: relative;
 }
+.events_card {
+  background-color: var(--color-pink-1);
+  padding: 0 1rem;
+}
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem 0 2rem 0;
+}
+.events > * {
+  margin-bottom: 2rem;
+}
+.journytop {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.image_container {
+  width: 85%;
+}
+.image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.event_text_container {
+  background-color: #ffffff;
+  position: absolute;
+  height: fit-content;
+  width: 16rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event_title {
+  margin: 2rem 0 1rem 0;
+  font-size: large;
+}
+.event_caption {
+  margin: 1rem 1rem 2rem 1rem;
+  font-size: medium;
+  text-align: center;
+}
+.discover_btn {
+  margin-bottom: 2rem;
+}
 .dontmiss_container {
   background: url(../../../public/assets/images/home-dontmiss-bg.jpg) no-repeat
     0 0;
@@ -70,10 +122,27 @@
   margin: 0 auto;
   margin-bottom: 3rem;
 }
-.hidden{
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding: 2rem;
+}
+.gallery > * {
+  aspect-ratio: 1;
+}
+
+.hidden {
   display: none;
 }
-.visible{
+.visible {
   display: block;
 }
 @media screen and (min-width: 1441px) {
@@ -90,8 +159,14 @@
     top: 0;
   }
 }
+@media screen and (max-width: 1440px) {
+  .event_text_container {
+    width: 20rem;
+  }
+}
 @media screen and (max-width: 1024px) {
-  .player,.background_cover {
+  .player,
+  .background_cover {
     transform: scale(1.1);
     transform-origin: right;
     height: 100%;
@@ -111,7 +186,36 @@
   }
   .thumnail {
     width: 90%;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+  }
+  .event_text_container {
+    width: 20rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+      row-gap: 1.5rem;
+  padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .journytop {
+    flex-direction: column;
+  }
+  .image_container {
+    width: 100%;
+  }
+  .event_text_container {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 768px) {
@@ -124,8 +228,8 @@
   .hero_text_container > * {
     margin: 0.2rem 0rem;
   }
-
-  .player,.background_cover {
+  .player,
+  .background_cover {
     transform-origin: 0%;
     height: 100%;
     position: absolute;
@@ -148,6 +252,13 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5rem;
+   
+  }
 }
 @media screen and (max-width: 600px) {
   .hero_text_container {
@@ -156,7 +267,8 @@
     transform: translate(0px, 0px);
     padding: 1rem;
   }
-  .player,.background_cover {
+  .player,
+  .background_cover {
     transform-origin: 0%;
     height: 100%;
     position: absolute;

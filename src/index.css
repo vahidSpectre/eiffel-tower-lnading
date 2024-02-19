@@ -3,7 +3,7 @@
   --color-grey-1: #212121;
   --color-grey-2: #222222;
   --color-grey-3: #555;
-  --color-pink-1: #f0f0f0;
+  --color-pink-1: #e8e4e4;
   --color-pink-2: #e7e7e7;
 
   --max-width: 1200px;
@@ -59,7 +59,7 @@ h6 {
 
 @media screen and (max-width: 1440px) {
   * {
-    font-size: 15px;
+    font-size: 20px;
   }
   h1 {
     font-size: 40px;
@@ -68,7 +68,7 @@ h6 {
 
 @media screen and (max-width: 1024px) {
   * {
-    font-size: 10px;
+    font-size: 17px;
   }
   h1 {
     font-size: 30px;
@@ -76,7 +76,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   * {
-    font-size: 10px;
+    font-size: 13px;
   }
   h1 {
     font-size: 20px;

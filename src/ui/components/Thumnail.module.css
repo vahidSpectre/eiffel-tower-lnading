@@ -6,7 +6,6 @@
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
-
 }
 .image_container {
   border-radius: 5px;
@@ -45,7 +44,7 @@
     padding: 0rem 1rem 3rem 2rem;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .image_container {
     max-width: 100%;
   }

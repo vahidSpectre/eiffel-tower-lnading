@@ -7,6 +7,8 @@ const Discover = lazy(() => import("../src/ui/pages/Discover"));
 const Events = lazy(() => import("../src/ui/pages/Events"));
 const News = lazy(() => import("../src/ui/pages/News"));
 const Photos = lazy(() => import("../src/ui/pages/Photos"));
+const NotFound = lazy(() => import("../src/ui/pages/NotFound"));
+
 function App() {
   return (
     <Routes className="App">
@@ -47,6 +49,14 @@ function App() {
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Photos />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/*"
+        element={
+          <Suspense fallback={<>Loading ...</>}>
+            <NotFound />
           </Suspense>
         }
       />

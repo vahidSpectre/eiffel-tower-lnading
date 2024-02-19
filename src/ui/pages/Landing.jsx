@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../layout/Header";
 import CustomButton from "../components/CustomButton";
 
@@ -10,11 +10,26 @@ import Thumnail from "../components/Thumnail";
 import Svg from "../components/Svg";
 import data from "../../data/data.json";
 import Footer from "../layout/Footer";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import EventCard from "../components/EventCard";
+import Photo from "../components/Photo";
+import { useSelector, useDispatch } from "react-redux";
+import { languageActions } from "../../store/index";
+
 const Landing = () => {
   const [loadingVideo, setLoadingVideo] = useState(true);
 
   const navigate = useNavigate();
+  const language = useSelector((state) => state.lan);
+  const dispatch = useDispatch();
+
+  const handleChangeLanguage = () => {
+    dispatch(languageActions.ar());
+  };
+  useEffect(() => {
+    console.log(language.language);
+  }, [language.language]);
+
   return (
     <div className={classes.main_container}>
       <Header />
@@ -40,7 +55,10 @@ const Landing = () => {
         <span className={classes.hero_text_container}>
           <h1>The Eiffel Tower</h1>
           <h3>There's no felling like it...</h3>
-          <CustomButton text={"Buy a Ticket"} />
+          <CustomButton
+            text={"Buy a Ticket"}
+            onClick={() => navigate("/a;sdkfj")}
+          />
         </span>
       </section>
       <Section className={classes.timingContainer}>
@@ -73,22 +91,43 @@ const Landing = () => {
         </HeroTimeingWrapper>
       </Section>
 
-      <Section className={classes.events}>
+      <Section className={classes.events} cardProps={classes.events_card}>
         <UnderlinkedText text={"Events at the Tower"} />
+        <EventCard
+          src={data.events.event_1.src}
+          title={data.events.event_1.title}
+          caption={data.events.event_1.caption}
+        />
         <CustomButton
           text={"View all Events"}
           border={true}
           onClick={() => navigate("/events")}
         />
-        <CustomButton
-          text={"Discover the Eiffel Tower"}
-          border={true}
-          onClick={() => navigate("/discover")}
-        />
+        <div className={classes.journytop}>
+          <div className={classes.image_container}>
+            <img src={data.events.background} alt="Event background" />
+          </div>
+          <div className={classes.event_text_container}>
+            <h3 className={classes.event_title}>A journey to the top</h3>
+            <p className={classes.event_caption}>
+              Come and discover the Eiffel Tower on the only trip to the top of
+              it's kink in Europe, and let pure emotions carry you from the
+              esplanade to the top.
+            </p>
+            <CustomButton
+              text={"Discover the Eiffel Tower"}
+              border={true}
+              onClick={() => navigate("/discover")}
+              style={classes.discover_btn}
+            />
+          </div>
+        </div>
       </Section>
+
       <Section className={classes.now}>
         <UnderlinkedText text={"Now at the Tower"} />
       </Section>
+
       <Section className={classes.news}>
         <UnderlinkedText text={"News"} />
         <CustomButton
@@ -97,6 +136,7 @@ const Landing = () => {
           onClick={() => navigate("/news")}
         />
       </Section>
+
       <Section
         className={classes.dontmiss}
         cardProps={classes.dontmiss_container}
@@ -123,55 +163,57 @@ const Landing = () => {
           />
         </div>
       </Section>
+
       <Section className={classes.youare}>
         <UnderlinkedText text={"If you are"} />
         <div className={classes.youare_container}>
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
-            }
-            caption={"Family"}
+            src={data.youare.family.src}
+            caption={data.youare.family.caption}
             border={true}
           />
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
-            }
-            caption={"Professional in the Tourism Industry"}
+            src={data.youare.industry.src}
+            caption={data.youare.industry.caption}
             border={true}
           />
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
-            }
-            caption={"A business"}
+            src={data.youare.biz.src}
+            caption={data.youare.biz.caption}
             border={true}
           />
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
-            }
-            caption={"Teachers"}
+            src={data.youare.teacher.src}
+            caption={data.youare.teacher.caption}
             border={true}
           />
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
-            }
-            caption={"Visitors with disabilities"}
+            src={data.youare.dis.src}
+            caption={data.youare.dis.caption}
             border={true}
           />
           <Svg
-            src={
-              "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
-            }
-            caption={"A journalist"}
+            src={data.youare.journalist.src}
+            caption={data.youare.journalist.caption}
             border={true}
           />
         </div>
       </Section>
-      <Section>
+
+      <Section className={classes.socialmedia}>
         <UnderlinkedText text={"The Eiffel Tower on social media"} />
+        <div className={classes.gallery}>
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+          <Photo src={data.background_cover} />
+        </div>
         <CustomButton
           text={`   See more photos    `}
           border={true}

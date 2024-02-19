@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #ffffff;
+}
+.title {
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-size: large;
+  font-family: robotoLight;
+  max-width: 20rem;
+  word-break: break-all;
+}
+.caption {
+  padding: 0rem 1rem 3rem 1rem;
+  font-size: medium;
+  max-width: 20rem;
+}
+.image_container {
+  width: 20rem;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+  .image_container{
+    width: 100%;
+  }
+}
