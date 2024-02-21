@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./Footer.module.css";
 import UnderlinkedText from "../components/UnderlinedText";
@@ -9,16 +10,17 @@ import Section from "../components/Section";
 import SimpleSvg from "../components/SimpleSvg";
 import Svg from "../components/Svg";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <section
         className={`${classes.footer_top} ${classes.color_black} ${classes.text_white}`}
       >
-        <UnderlinkedText text={"Book a ticket"} />
+        <UnderlinkedText text={`${t("booking")}`} />
         <Section className={classes.footer_content}>
           <img src={data.footer_svgs.clock} alt="clock" />
-          <p>Save time, buy your tickets online</p>
-          <CustomButton text={"Buy a ticket"} />
+          <p>{`${t("save_time")}`}</p>
+          <CustomButton text={`${t("buy_ticket")}`} />
         </Section>
       </section>
       <section
@@ -32,58 +34,48 @@ const Footer = () => {
           />
         </span>
         <p className={classes.announce}>
-          <span className={classes.text_white}>TOUREIFFEL.PARIS</span> THE
-          OFFICIAL WEBSITE OF THE EIFFEL TOWER
+          <span className={classes.text_white}>{`${t("tp_white")}`}</span>
+          {`${t("tp_grey")}`}
         </p>
-        <p className={classes.own}>
-          A website owned by Sociéte d'Exploitation de la tour Eiffel
-        </p>
+        <p className={classes.own}>{`${t("copyright")}`}</p>
       </section>
       <section className={`${classes.svgs_container} ${classes.color_black}`}>
         <Section className={`${classes.svgs} ${classes.text_white}`}>
           <SimpleSvg
             src={data.footer_svgs.access_map.src}
-            title={data.footer_svgs.access_map.title}
+            title={`${t("access_map")}`}
           />
           <SimpleSvg
             src={data.footer_svgs.contact.src}
-            title={data.footer_svgs.contact.title}
+            title={`${t("contact")}`}
           />
-          <SimpleSvg
-            src={data.footer_svgs.faq.src}
-            title={data.footer_svgs.faq.title}
-          />
-          <SimpleSvg
-            src={data.footer_svgs.jobs.src}
-            title={data.footer_svgs.jobs.title}
-          />
-          <SimpleSvg
-            src={data.footer_svgs.press.src}
-            title={data.footer_svgs.press.title}
-          />
+          <SimpleSvg src={data.footer_svgs.faq.src} title={`${t("faq")}`} />
+          <SimpleSvg src={data.footer_svgs.jobs.src} title={`${t("jobs")}`} />
+          <SimpleSvg src={data.footer_svgs.press.src} title={`${t("press")}`} />
           <SimpleSvg
             src={data.footer_svgs.companies.src}
-            title={data.footer_svgs.companies.title}
+            title={`${t("companies")}`}
           />
           <SimpleSvg
             src={data.footer_svgs.schools.src}
-            title={data.footer_svgs.schools.title}
+            title={`${t("schools")}`}
           />
           <SimpleSvg
             src={data.footer_svgs.industry.src}
-            title={data.footer_svgs.industry.title}
+            title={`${t("pro")}`}
           />
-          <SimpleSvg
-            src={data.footer_svgs.sete.src}
-            title={data.footer_svgs.sete.title}
-          />
+          <SimpleSvg src={data.footer_svgs.sete.src} title={`${t("sete")}`} />
         </Section>
       </section>
       <section
         className={`${classes.info} ${classes.color_grey} ${classes.text_grey}`}
       >
         <Section className={classes.bottom_content}>
-          <img className={classes.paris_svg} src={data.footer_svgs.paris.src} alt="" />
+          <img
+            className={classes.paris_svg}
+            src={data.footer_svgs.paris.src}
+            alt=""
+          />
           <p>-</p>
           <h2>Legal information</h2>
           <p>-</p>
@@ -95,11 +87,23 @@ const Footer = () => {
         </Section>
         <p>Follow us on</p>
         <Section className={classes.social_meida}>
-          <Svg imageProps={classes.social_svg} src={data.footer_svgs.facebook.src}/>
-          <Svg imageProps={classes.social_svg} src={data.footer_svgs.x.src}/>
-          <Svg imageProps={classes.social_svg} src={data.footer_svgs.linkedin.src}/>
-          <Svg imageProps={classes.social_svg} src={data.footer_svgs.youtube.src}/>
-          <Svg imageProps={classes.social_svg} src={data.footer_svgs.instagram.src}/>
+          <Svg
+            imageProps={classes.social_svg}
+            src={data.footer_svgs.facebook.src}
+          />
+          <Svg imageProps={classes.social_svg} src={data.footer_svgs.x.src} />
+          <Svg
+            imageProps={classes.social_svg}
+            src={data.footer_svgs.linkedin.src}
+          />
+          <Svg
+            imageProps={classes.social_svg}
+            src={data.footer_svgs.youtube.src}
+          />
+          <Svg
+            imageProps={classes.social_svg}
+            src={data.footer_svgs.instagram.src}
+          />
         </Section>
       </section>
     </footer>

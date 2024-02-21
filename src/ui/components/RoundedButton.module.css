@@ -1,0 +1,21 @@
+.wrapper {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin: 1.2rem;
+  cursor: pointer;
+  font-size: medium;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.disabled {
+  border: 2px solid gray;
+}
+.enabled {
+  border: 2px solid #ffffff;
+}

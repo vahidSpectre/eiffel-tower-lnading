@@ -13,26 +13,18 @@ import Footer from "../layout/Footer";
 import { useNavigate } from "react-router-dom";
 import EventCard from "../components/EventCard";
 import Photo from "../components/Photo";
-import { useSelector, useDispatch } from "react-redux";
-import { languageActions } from "../../store/index";
+import { useTranslation } from "react-i18next";
 
 const Landing = () => {
   const [loadingVideo, setLoadingVideo] = useState(true);
 
   const navigate = useNavigate();
-  const language = useSelector((state) => state.lan);
-  const dispatch = useDispatch();
 
-  const handleChangeLanguage = () => {
-    dispatch(languageActions.ar());
-  };
-  useEffect(() => {
-    console.log(language.language);
-  }, [language.language]);
+  const { t } = useTranslation();
 
   return (
     <div className={classes.main_container}>
-      <Header />
+      <Header locale={true} />
       <section className={classes.main_hero_wrapper}>
         <img
           className={`${classes.background_cover} ${
@@ -53,38 +45,35 @@ const Landing = () => {
           <source src={data.hero_video} type="video/mp4" />
         </video>
         <span className={classes.hero_text_container}>
-          <h1>The Eiffel Tower</h1>
-          <h3>There's no felling like it...</h3>
-          <CustomButton
-            text={"Buy a Ticket"}
-            onClick={() => navigate("/a;sdkfj")}
-          />
+          <h1>{t("hero_title")}</h1>
+          <h3>{t("hero_caption")}</h3>
+          <CustomButton text={t("buy_ticket")} onClick={() => navigate("/")} />
         </span>
       </section>
       <Section className={classes.timingContainer}>
         <HeroTimeingWrapper
           className={classes.timing_text}
-          title={"What to know today"}
+          title={`${t("timing_title_1")}`}
         >
           xzcv
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
-          title={"Waiting times"}
+          title={`${t("timing_title_2")}`}
           arrow={true}
         >
           hello
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
-          title={"Opening times"}
+          title={`${t("timing_title_3")}`}
           arrow={true}
         >
           hello
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
-          title={"Access map"}
+          title={`${t("timing_title_4")}`}
           arrow={true}
         >
           hello
@@ -92,16 +81,18 @@ const Landing = () => {
       </Section>
 
       <Section className={classes.events} cardProps={classes.events_card}>
-        <UnderlinkedText text={"Events at the Tower"} />
+        <UnderlinkedText text={`${t("events_title")}`} />
         <EventCard
           src={data.events.event_1.src}
-          title={data.events.event_1.title}
-          caption={data.events.event_1.caption}
+          title={`${t("events_p1_title")}`}
+          caption={`${t("events_p1_caption")}`}
         />
         <CustomButton
-          text={"View all Events"}
+          text={`${t("all_events")}`}
           border={true}
-          onClick={() => navigate("/events")}
+          onClick={() =>
+            navigate(`/${localStorage.getItem("i18nextLng")}/events`)
+          }
         />
         <div className={classes.journytop}>
           <div className={classes.image_container}>
@@ -109,15 +100,15 @@ const Landing = () => {
           </div>
           <div className={classes.event_text_container}>
             <h3 className={classes.event_title}>A journey to the top</h3>
-            <p className={classes.event_caption}>
-              Come and discover the Eiffel Tower on the only trip to the top of
-              it's kink in Europe, and let pure emotions carry you from the
-              esplanade to the top.
-            </p>
+            <p className={classes.event_caption}>{`${t(
+              "journty_top_title"
+            )}`}</p>
             <CustomButton
-              text={"Discover the Eiffel Tower"}
+              text={`${t("discover")}`}
               border={true}
-              onClick={() => navigate("/discover")}
+              onClick={() =>
+                navigate(`/${localStorage.getItem("i18nextLng")}/discover`)
+              }
               style={classes.discover_btn}
             />
           </div>
@@ -125,15 +116,17 @@ const Landing = () => {
       </Section>
 
       <Section className={classes.now}>
-        <UnderlinkedText text={"Now at the Tower"} />
+        <UnderlinkedText text={`${t("now_title")}`} />
       </Section>
 
       <Section className={classes.news}>
-        <UnderlinkedText text={"News"} />
+        <UnderlinkedText text={`${t("news_title")}`} />
         <CustomButton
-          text={"See all news"}
+          text={`${t("all_news")}`}
           border={true}
-          onClick={() => navigate("/news")}
+          onClick={() =>
+            navigate(`/${localStorage.getItem("i18nextLng")}/news`)
+          }
         />
       </Section>
 
@@ -141,67 +134,67 @@ const Landing = () => {
         className={classes.dontmiss}
         cardProps={classes.dontmiss_container}
       >
-        <UnderlinkedText text={"Don't miss"} />
+        <UnderlinkedText text={`${t("miss_title")}`} />
         <div className={classes.thumnail_container}>
           <Thumnail
             className={classes.thumnail}
             src={data.thumnails.thumnail_1.image}
-            title={data.thumnails.thumnail_1.title}
-            caption={data.thumnails.thumnail_1.caption}
+            title={`${t("miss_1_title")}`}
+            caption={`${t("miss_1_caption")}`}
           />
           <Thumnail
             className={classes.thumnail}
             src={data.thumnails.thumnail_2.image}
-            title={data.thumnails.thumnail_2.title}
-            caption={data.thumnails.thumnail_2.caption}
+            title={`${t("miss_2_title")}`}
+            caption={`${t("miss_2_caption")}`}
           />
           <Thumnail
             className={classes.thumnail}
             src={data.thumnails.thumnail_3.image}
-            title={data.thumnails.thumnail_3.title}
-            caption={data.thumnails.thumnail_3.caption}
+            title={`${t("miss_3_title")}`}
+            caption={`${t("miss_3_caption")}`}
           />
         </div>
       </Section>
 
       <Section className={classes.youare}>
-        <UnderlinkedText text={"If you are"} />
+        <UnderlinkedText text={`${t("you_title")}`} />
         <div className={classes.youare_container}>
           <Svg
             src={data.youare.family.src}
-            caption={data.youare.family.caption}
+            caption={`${t("you_1")}`}
             border={true}
           />
           <Svg
             src={data.youare.industry.src}
-            caption={data.youare.industry.caption}
+            caption={`${t("you_2")}`}
             border={true}
           />
           <Svg
             src={data.youare.biz.src}
-            caption={data.youare.biz.caption}
+            caption={`${t("you_3")}`}
             border={true}
           />
           <Svg
             src={data.youare.teacher.src}
-            caption={data.youare.teacher.caption}
+            caption={`${t("you_4")}`}
             border={true}
           />
           <Svg
             src={data.youare.dis.src}
-            caption={data.youare.dis.caption}
+            caption={`${t("you_5")}`}
             border={true}
           />
           <Svg
             src={data.youare.journalist.src}
-            caption={data.youare.journalist.caption}
+            caption={`${t("you_6")}`}
             border={true}
           />
         </div>
       </Section>
 
       <Section className={classes.socialmedia}>
-        <UnderlinkedText text={"The Eiffel Tower on social media"} />
+        <UnderlinkedText text={`${t("media_title")}`} />
         <div className={classes.gallery}>
           <Photo src={data.background_cover} />
           <Photo src={data.background_cover} />
@@ -215,9 +208,11 @@ const Landing = () => {
           <Photo src={data.background_cover} />
         </div>
         <CustomButton
-          text={`   See more photos    `}
+          text={`   ${t("all_media")}   `}
           border={true}
-          onClick={() => navigate("/photos")}
+          onClick={() =>
+            navigate(`/${localStorage.getItem("i18nextLng")}/photos`)
+          }
         />
       </Section>
       <Footer />

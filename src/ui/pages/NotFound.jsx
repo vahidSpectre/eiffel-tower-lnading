@@ -46,7 +46,7 @@ const NotFound = () => {
             <CustomButton
               text={"Homepage"}
               border={true}
-              onClick={() => navigate("/")}
+              onClick={() => navigate(`/${localStorage.getItem('i18nextLng')}`)}
             />
           </span>
         </div>

@@ -1,27 +1,60 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
+import i18next from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+import HttpApi from "i18next-http-backend";
+import { useSelector } from "react-redux";
+
+import Drawer from "./ui/layout/Drawer";
 import "./App.css";
-const Landing = lazy(() => import("./ui/pages/Landing"));
-const Discover = lazy(() => import("../src/ui/pages/Discover"));
-const Events = lazy(() => import("../src/ui/pages/Events"));
-const News = lazy(() => import("../src/ui/pages/News"));
-const Photos = lazy(() => import("../src/ui/pages/Photos"));
-const NotFound = lazy(() => import("../src/ui/pages/NotFound"));
 
 function App() {
+  const Landing = lazy(() => import("./ui/pages/Landing"));
+  const Discover = lazy(() => import("../src/ui/pages/Discover"));
+  const Events = lazy(() => import("../src/ui/pages/Events"));
+  const News = lazy(() => import("../src/ui/pages/News"));
+  const Photos = lazy(() => import("../src/ui/pages/Photos"));
+  const NotFound = lazy(() => import("../src/ui/pages/NotFound"));
+
+  const store = useSelector((state) => state.language);
+
+  i18next
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .use(HttpApi)
+    .init({
+      supportedLngs: ["de", "en", "es", "fa", "fr", "it", "ja", "pt"],
+      // lng: store.language,
+      fallbackLng: "en",
+      backend: {
+        loadPath:
+          "https://vahidspectre.github.io/eiffel-tower-lnading/assets/locales/{{lng}}/translation.json",
+      },
+      detection: {
+        order: ["path", "localStorage", "cookie", "htmlTag", "subdomain"],
+        caches: ["localStorage"],
+      },
+      lookupFromPathIndex: 1,
+      checkWhitelist: true,
+    });
+
   return (
     <Routes className="App">
       <Route
-        path="/"
+        path={`/:lng`}
         element={
           <Suspense fallback={<>Loading ...</>}>
-            <Landing />
+            <Drawer>
+              <Landing />
+            </Drawer>
           </Suspense>
         }
       />
       <Route
-        path="/discover"
+        path={`${localStorage.getItem("i18nextLng")}/discover`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Discover />
@@ -29,7 +62,7 @@ function App() {
         }
       />
       <Route
-        path="/events"
+        path={`${localStorage.getItem("i18nextLng")}/events`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Events />
@@ -37,7 +70,7 @@ function App() {
         }
       />
       <Route
-        path="/news"
+        path={`/${localStorage.getItem("i18nextLng")}/news`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <News />
@@ -45,7 +78,7 @@ function App() {
         }
       />
       <Route
-        path="/photos"
+        path={`${localStorage.getItem("i18nextLng")}/photos`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Photos />
