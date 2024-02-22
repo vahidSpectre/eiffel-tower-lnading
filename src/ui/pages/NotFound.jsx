@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import classes from "./NotFound.module.css";
 import Header from "../layout/Header";
-import Footer from "../layout/Footer";
 import Section from "../components/Section";
 import CustomButton from "../components/CustomButton";
 import { useNavigate } from "react-router-dom";
@@ -46,7 +45,7 @@ const NotFound = () => {
             <CustomButton
               text={"Homepage"}
               border={true}
-              onClick={() => navigate(`/${localStorage.getItem('i18nextLng')}`)}
+              onClick={() => navigate(`/`)}
             />
           </span>
         </div>
