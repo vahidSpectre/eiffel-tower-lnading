@@ -44,7 +44,7 @@ function App() {
   return (
     <Routes className="App">
       <Route
-        path={`/eiffel-tower-lnading/:lng`}
+        path={`/:lng`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Drawer>
@@ -54,7 +54,7 @@ function App() {
         }
       />
       <Route
-        path={`/eiffel-tower-lnading/${localStorage.getItem(
+        path={`/${localStorage.getItem(
           "i18nextLng"
         )}/discover`}
         element={
@@ -64,7 +64,7 @@ function App() {
         }
       />
       <Route
-        path={`/eiffel-tower-lnading/${localStorage.getItem(
+        path={`/${localStorage.getItem(
           "i18nextLng"
         )}/events`}
         element={
@@ -74,7 +74,7 @@ function App() {
         }
       />
       <Route
-        path={`/eiffel-tower-lnading/${localStorage.getItem(
+        path={`/${localStorage.getItem(
           "i18nextLng"
         )}/news`}
         element={
@@ -84,7 +84,7 @@ function App() {
         }
       />
       <Route
-        path={`/eiffel-tower-lnading/${localStorage.getItem(
+        path={`/${localStorage.getItem(
           "i18nextLng"
         )}/photos`}
         element={
