@@ -11,7 +11,7 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/eiffel-tower-lnading">
         <React.StrictMode>
           <App />
         </React.StrictMode>
