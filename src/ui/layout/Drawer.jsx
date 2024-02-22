@@ -4,14 +4,14 @@ import classes from "./Drawer.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, languageActions } from "../../store";
 import RoundedButton from "../components/RoundedButton";
-import { useNavigate } from "react-router-dom";
+
 import data from '../../data/data.json'
 
 const Drawer = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = useState(true);
 
   const store = useSelector((state) => state.drawer);
-  const lan = useSelector((state) => state.language);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,47 +22,38 @@ const handleCloseDrawer =()=>{
   dispatch(drawerActions.drawerClose())
 }
 
-  const navigate = useNavigate();
 
   const handleChangeLanguageFrance = () => {
     dispatch(languageActions.french());
     dispatch(drawerActions.drawerClose());
-    navigate("/fr");
   };
   const handleChangeLanguageEnglish = () => {
     dispatch(languageActions.english());
     dispatch(drawerActions.drawerClose());
-    navigate("/en");
   };
   const handleChangeLanguageEspanish = () => {
     dispatch(languageActions.spanish());
     dispatch(drawerActions.drawerClose());
-    navigate("/es");
   };
   const handleChangeLanguageItalian = () => {
     dispatch(languageActions.italian());
     dispatch(drawerActions.drawerClose());
-    navigate("/it");
   };
   const handleChangeLanguageDutsch = () => {
     dispatch(languageActions.deutsch());
     dispatch(drawerActions.drawerClose());
-    navigate("/de");
   };
   const handleChangeLanguagePortu = () => {
     dispatch(languageActions.portgues());
     dispatch(drawerActions.drawerClose());
-    navigate("/pt");
   };
   const handleChangeLanguageJapanese = () => {
     dispatch(languageActions.japanese());
     dispatch(drawerActions.drawerClose());
-    navigate("/ja");
   };
   const handleChangeLanguageArabic = () => {
     dispatch(languageActions.persian());
     dispatch(drawerActions.drawerClose());
-    navigate("/fa");
   };
 
   return (

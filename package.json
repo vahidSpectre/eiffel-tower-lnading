@@ -1,7 +1,7 @@
 {
   "name": "eiffel-tower-lnading",
   "version": "0.1.0",
-  "homepage": "https://vahidspectre.github.io/eiffel-tower-lnading/en",
+  "homepage": "https://vahidspectre.github.io/eiffel-tower-lnading/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
