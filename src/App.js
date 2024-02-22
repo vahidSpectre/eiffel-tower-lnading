@@ -54,7 +54,7 @@ function App() {
         }
       />
       <Route
-        path={`/discover`}
+        path={`/:lng/discover`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Discover />
@@ -62,7 +62,7 @@ function App() {
         }
       />
       <Route
-        path={`/events`}
+        path={`/:lng/events`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Events />
@@ -70,7 +70,7 @@ function App() {
         }
       />
       <Route
-        path={`/news`}
+        path={`/:lng/news`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <News />
@@ -78,7 +78,7 @@ function App() {
         }
       />
       <Route
-        path={`/photos`}
+        path={`/:lng/photos`}
         element={
           <Suspense fallback={<>Loading ...</>}>
             <Photos />
