@@ -27,42 +27,42 @@ const handleCloseDrawer =()=>{
   const handleChangeLanguageFrance = () => {
     dispatch(languageActions.french());
     dispatch(drawerActions.drawerClose());
-    navigate("/fr");
+    navigate("eiffel-tower-lnading/fr");
   };
   const handleChangeLanguageEnglish = () => {
     dispatch(languageActions.english());
     dispatch(drawerActions.drawerClose());
-    navigate("/en");
+    navigate("eiffel-tower-lnading/en");
   };
   const handleChangeLanguageEspanish = () => {
     dispatch(languageActions.spanish());
     dispatch(drawerActions.drawerClose());
-    navigate("/es");
+    navigate("eiffel-tower-lnading/es");
   };
   const handleChangeLanguageItalian = () => {
     dispatch(languageActions.italian());
     dispatch(drawerActions.drawerClose());
-    navigate("/it");
+    navigate("eiffel-tower-lnading/it");
   };
   const handleChangeLanguageDutsch = () => {
     dispatch(languageActions.deutsch());
     dispatch(drawerActions.drawerClose());
-    navigate("/de");
+    navigate("eiffel-tower-lnading/de");
   };
   const handleChangeLanguagePortu = () => {
     dispatch(languageActions.portgues());
     dispatch(drawerActions.drawerClose());
-    navigate("/pt");
+    navigate("eiffel-tower-lnading/pt");
   };
   const handleChangeLanguageJapanese = () => {
     dispatch(languageActions.japanese());
     dispatch(drawerActions.drawerClose());
-    navigate("/ja");
+    navigate("eiffel-tower-lnading/ja");
   };
   const handleChangeLanguageArabic = () => {
     dispatch(languageActions.persian());
     dispatch(drawerActions.drawerClose());
-    navigate("/fa");
+    navigate("eiffel-tower-lnading/fa");
   };
 
   return (
