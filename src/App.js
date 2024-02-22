@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 
 import Drawer from "./ui/layout/Drawer";
 import "./App.css";
+import SuspenseFallback from "./ui/components/SuspenseFallback";
 
 function App() {
   const Landing = lazy(() => import("./ui/pages/Landing"));
@@ -46,7 +47,7 @@ function App() {
       <Route
         path={`/`}
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <Drawer>
               <Landing />
             </Drawer>
@@ -56,7 +57,7 @@ function App() {
       <Route
         path={`/:lng/discover`}
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <Discover />
           </Suspense>
         }
@@ -64,7 +65,7 @@ function App() {
       <Route
         path={`/:lng/events`}
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <Events />
           </Suspense>
         }
@@ -72,7 +73,7 @@ function App() {
       <Route
         path={`/:lng/news`}
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <News />
           </Suspense>
         }
@@ -80,7 +81,7 @@ function App() {
       <Route
         path={`/:lng/photos`}
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <Photos />
           </Suspense>
         }
@@ -88,7 +89,7 @@ function App() {
       <Route
         path="/*"
         element={
-          <Suspense fallback={<>Loading ...</>}>
+          <Suspense fallback={<SuspenseFallback/>}>
             <NotFound />
           </Suspense>
         }

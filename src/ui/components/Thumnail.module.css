@@ -51,10 +51,16 @@
   .wrapper {
     flex-direction: column;
   }
+  .text {
+    width: 100%;
+  }
+
   .title {
     padding: 1.5rem 1rem 1rem 3rem;
+    font-size: large;
   }
   .caption {
     padding: 0rem 1rem 3rem 2rem;
+    font-size: medium;
   }
 }

@@ -55,3 +55,25 @@
     top: 0;
   }
 }
+@media screen and (max-width: 1024px) {
+ 
+}
+@media screen and (max-width: 900px) {
+.header_left_content li,.header_right_content{
+    font-size: small;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  
+ .header_left_content {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header{
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  
+}

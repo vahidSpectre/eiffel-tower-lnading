@@ -1,115 +1,115 @@
 {
-  "hero_video": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/video/tour-eiffel-timelapse-jour-nuit-recadre.mp4",
+  "hero_video": "http://localhost:3000/eiffel-tower-lnading/assets/video/tour-eiffel-timelapse-jour-nuit-recadre.mp4",
 
   "today": { "first": "lorem", "second": "lorem2" },
 
-  "background_cover": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/hero/tour-eiffel-timelapse-jour-nuit-recadre.jpg",
+  "background_cover": "http://localhost:3000/eiffel-tower-lnading/assets/images/hero/tour-eiffel-timelapse-jour-nuit-recadre.jpg",
 
   "header": {
-    "search": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/header/search.svg"
+    "search": "http://localhost:3000/eiffel-tower-lnading/assets/images/header/search.svg"
   },
 
   "drawer": {
-    "x": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/drawer/x.svg"
+    "x": "http://localhost:3000/eiffel-tower-lnading/assets/images/drawer/x.svg"
   },
 
   "thumnails": {
     "thumnail_1": {
       "title": "The Tower",
-      "image": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/le-monument-thumbnail.jpg",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/le-monument-thumbnail.jpg",
       "caption": " History, key figures, lights, paintings, explore all the secrets of the world's most iconic monument"
     },
     "thumnail_2": {
       "title": "Restaurants & stores",
-      "image": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/retaurants-boutiques-thumbnail.jpg",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/retaurants-boutiques-thumbnail.jpg",
       "caption": "On every floor, the Eiffel Tower has a range of dining and gift-shop options."
     },
     "thumnail_3": {
       "title": "The Gustave Eiffel Salon",
-      "image": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/le-salon-gustave-eiffel-thumbnail.jpg",
+      "image": "http://localhost:3000/eiffel-tower-lnading/assets/images/le-salon-gustave-eiffel-thumbnail.jpg",
       "caption": "For your business events, hire a new venue in a magical setting. Fully equipped to meet all of your needs."
     }
   },
 
   "footer_svgs": {
-    "clock": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/clock.svg",
-    "tower": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/tour-eiffel-icon-w.svg",
+    "clock": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/clock.svg",
+    "tower": "http://localhost:3000/eiffel-tower-lnading/assets/images/tour-eiffel-icon-w.svg",
     "access_map": {
       "title": "Access map",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/access-map.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/access-map.svg"
     },
     "contact": {
       "title": "Contact",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/contact.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/contact.svg"
     },
     "faq": {
       "title": "FAQ",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/faq.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/faq.svg"
     },
     "jobs": {
       "title": "Jobs",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/jobs.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/jobs.svg"
     },
     "press": {
       "title": "Press",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/press.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/press.svg"
     },
     "companies": {
       "title": "Companies",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/companies.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/companies.svg"
     },
     "schools": {
       "title": "Schools",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/teacher.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/teacher.svg"
     },
     "industry": {
       "title": "Professionals in the Tourism Industry",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/turism.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/turism.svg"
     },
     "sete": {
       "title": "SETE",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/sete.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/sete.svg"
     },
     "paris": {
       "title": "paris",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/mairie-de-paris-logo.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/mairie-de-paris-logo.svg"
     },
     "instagram": {
       "title": "instagram",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/instagram.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/instagram.svg"
     },
     "linkedin": {
       "title": "linkedin",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/linkedin.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/linkedin.svg"
     },
     "x": {
       "title": "x",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/twitter.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/twitter.svg"
     },
     "youtube": {
       "title": "youtube",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/youtube.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/youtube.svg"
     },
     "facebook": {
       "title": "facebook",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/footer-svgs/facebook.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/footer-svgs/facebook.svg"
     }
   },
   "notfound": {
-    "pic_1": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/1.jpg",
-    "pic_2": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/2.jpg",
-    "pic_3": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/3.jpg",
-    "pic_4": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/4.jpg",
-    "pic_5": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/5.jpg",
-    "pic_6": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/6.jpg",
-    "pic_7": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/7.jpg",
-    "pic_8": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/8.jpg",
-    "pic_9": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/not-found/9.jpg"
+    "pic_1": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/1.jpg",
+    "pic_2": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/2.jpg",
+    "pic_3": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/3.jpg",
+    "pic_4": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/4.jpg",
+    "pic_5": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/5.jpg",
+    "pic_6": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/6.jpg",
+    "pic_7": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/7.jpg",
+    "pic_8": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/8.jpg",
+    "pic_9": "http://localhost:3000/eiffel-tower-lnading/assets/images/not-found/9.jpg"
   },
   "events": {
-    "background": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/events/home-bg-1.jpg",
+    "background": "http://localhost:3000/eiffel-tower-lnading/assets/images/events/home-bg-1.jpg",
     "event_1": {
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/events/event1.jpg",
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/events/event1.jpg",
       "title": "Exhabition on the fisrt floor",
       "caption": "From 13 February 2024 to 01 April 2024"
     }
@@ -117,27 +117,27 @@
   "youare": {
     "family": {
       "caption": "Family",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/family-group-svgrepo-com.svg"
     },
     "industry": {
       "caption": "Professional in the Tourism Industry",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/travel.svg"
     },
     "biz": {
       "caption": "A business",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/businessman-svgrepo-com.svg"
     },
     "teacher": {
       "caption": "Teacher",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/teacher-svgrepo-com.svg"
     },
     "dis": {
       "caption": "Visitors with disabilities",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/wheelchair-svgrepo-com.svg"
     },
     "journalist": {
       "caption": "A journalist",
-      "src": "https://vahidspectre.github.io/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
+      "src": "http://localhost:3000/eiffel-tower-lnading/assets/images/ifyou-svgs/jurnal.svg"
     }
   }
 }
