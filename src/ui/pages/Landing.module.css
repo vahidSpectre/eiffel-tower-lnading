@@ -7,7 +7,6 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
 }
 .hero_text_container > * {
   margin: 0.4rem 0rem;
@@ -104,6 +103,17 @@
 .discover_btn {
   margin-bottom: 2rem;
 }
+.now{
+  overflow: hidden;
+}
+.now_thum_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.now_thum_container > *{
+  width: 28% !important;
+}
 .dontmiss_container {
   background: url(../../../public/assets/images/home-dontmiss-bg.jpg) no-repeat
     0 0;
@@ -178,7 +188,7 @@
     object-fit: cover;
   }
   .main_hero_wrapper {
-    height: 50%;
+    height: 70vh;
   }
   .timingContainer {
     top: 0;

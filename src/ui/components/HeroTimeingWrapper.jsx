@@ -1,12 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import classes from "./HeroTimeingWrapper.module.css";
-const HeroTimeingWrapper = ({ children, className, title,arrow }) => {
+import { nanoid } from "@reduxjs/toolkit";
+const HeroTimeingWrapper = ({ children, className, title, arrow, animate }) => {
+  const id = nanoid();
   return (
-    <div className={`${classes.wrapper} ${className} ${arrow?classes.arrow:''}`}>
+    <motion.div
+      className={`${classes.wrapper} ${className} ${
+        arrow ? classes.arrow : ""
+      }`}
+      whileHover={{ scale: animate ? 1.05 : 1 }}
+      key={id}
+    >
       <span className={classes.title}>{title}</span>
       <span className={classes.content}>{children}</span>
-    </div>
+    </motion.div>
   );
 };
 

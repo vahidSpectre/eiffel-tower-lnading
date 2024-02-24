@@ -25,6 +25,15 @@
   "discover": "Entdecken Sie den Eiffelturm",
 
   "now_title": "Jetzt im Tower",
+  "now_thumnail_1_top_title": "Speisen Sie im 1. Stock des Eiffelturms",
+  "now_thumnail_1_caption": "Genießen Sie das Schauspiel des beleuchteten Paris bei einem raffinierten Abendessen in der Madame Brasserie!",
+  "now_thumnail_1_bot_title": "Reservieren Sie Ihren Tisch",
+  "now_thumnail_2_top_title": "Exklusive Kollektion des Eiffelturms",
+  "now_thumnail_2_caption": "Holen Sie sich den offiziellen Schneeball, Miniatur-Eiffeltürme und weitere exklusive Souvenirs nach Hause!",
+  "now_thumnail_2_bot_title": "Nur in den Tower-Shops!",
+  "now_thumnail_3_top_title": "Kostenloser mobiler Besucherführer",
+  "now_thumnail_3_caption": "Verbessern Sie Ihr Erlebnis im Tower mit Ihrem Mobiltelefon. ",
+  "now_thumnail_3_bot_title": "Stellen Sie eine Verbindung zur Webanwendung her",
 
   "news_title": "Nachricht",
   "all_news": "Alle Neuigkeiten anzeigen",
@@ -53,7 +62,7 @@
   "tp_white": "TOURIFFEL.PARIS",
   "tp_grey": "DIE OFFIZIELLE WEBSITE DES EIFFELTURMS",
   "copyright": "Eine Website der Sociéte d'Exploitation de la tour Eiffel",
-  
+
   "access_map": "Zugangskarte",
   "زontact": "Kontakt",
   "faq": "FAQ",

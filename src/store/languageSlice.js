@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initiaState = { language: "en", isDrawerOpen: false };
+const initiaState = { language: localStorage.getItem("i18nextLng") | "en" };
 
 const languageSlice = createSlice({
   name: "language",

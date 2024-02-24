@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../layout/Header";
 import CustomButton from "../components/CustomButton";
 
@@ -14,13 +14,21 @@ import { useNavigate } from "react-router-dom";
 import EventCard from "../components/EventCard";
 import Photo from "../components/Photo";
 import { useTranslation } from "react-i18next";
+import CombinedThumnail from "../components/CombinedThumnail";
 
 const Landing = () => {
   const [loadingVideo, setLoadingVideo] = useState(true);
+  const [isRtl, setIsRtl] = useState(false);
 
   const navigate = useNavigate();
+    const language = localStorage.getItem("i18nextLng");
+
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    language === "fa" ? setIsRtl(true) : setIsRtl(false);
+  }, [language, isRtl]);
 
   return (
     <div className={classes.main_container}>
@@ -44,7 +52,10 @@ const Landing = () => {
         >
           <source src={data.hero_video} type="video/mp4" />
         </video>
-        <span className={classes.hero_text_container}>
+        <span
+          className={classes.hero_text_container}
+          style={{ direction: `${isRtl ? "rtl" : "ltr"}` }}
+        >
           <h1>{t("hero_title")}</h1>
           <h3>{t("hero_caption")}</h3>
           <CustomButton text={t("buy_ticket")} onClick={() => navigate("/")} />
@@ -61,6 +72,7 @@ const Landing = () => {
           className={classes.timing_secondary}
           title={`${t("timing_title_2")}`}
           arrow={true}
+          animate={true}
         >
           hello
         </HeroTimeingWrapper>
@@ -68,6 +80,7 @@ const Landing = () => {
           className={classes.timing_secondary}
           title={`${t("timing_title_3")}`}
           arrow={true}
+          animate={true}
         >
           hello
         </HeroTimeingWrapper>
@@ -75,6 +88,7 @@ const Landing = () => {
           className={classes.timing_secondary}
           title={`${t("timing_title_4")}`}
           arrow={true}
+          animate={true}
         >
           hello
         </HeroTimeingWrapper>
@@ -116,7 +130,27 @@ const Landing = () => {
       </Section>
 
       <Section className={classes.now}>
-        <UnderlinkedText text={`${t("now_title")}`} />
+        <UnderlinkedText text={t("now_title")} />
+        <span className={classes.now_thum_container}>
+          <CombinedThumnail
+            src={data.now.pic_1}
+            topTitle={t("now_thumnail_1_top_title")}
+            caption={t("now_thumnail_1_caption")}
+            botTitle={t("now_thumnail_1_bot_title")}
+          />
+          <CombinedThumnail
+            src={data.now.pic_2}
+            topTitle={t("now_thumnail_2_top_title")}
+            caption={t("now_thumnail_2_caption")}
+            botTitle={t("now_thumnail_2_bot_title")}
+          />
+          <CombinedThumnail
+            src={data.now.pic_3}
+            topTitle={t("now_thumnail_3_top_title")}
+            caption={t("now_thumnail_3_caption")}
+            botTitle={t("now_thumnail_3_bot_title")}
+          />
+        </span>
       </Section>
 
       <Section className={classes.news}>

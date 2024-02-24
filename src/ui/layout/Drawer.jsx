@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, languageActions } from "../../store";
 import RoundedButton from "../components/RoundedButton";
 
-import data from '../../data/data.json'
+import data from "../../data/data.json";
 
 const Drawer = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = useState(true);
@@ -18,55 +18,54 @@ const Drawer = ({ children }) => {
     setDrawerOpen(store.drawer);
   }, [store.drawer]);
 
-const handleCloseDrawer =()=>{
-  dispatch(drawerActions.drawerClose())
-}
-
+  const handleCloseDrawer = () => {
+    dispatch(drawerActions.drawerClose());
+  };
 
   const handleChangeLanguageFrance = () => {
     dispatch(languageActions.french());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageEnglish = () => {
     dispatch(languageActions.english());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageEspanish = () => {
     dispatch(languageActions.spanish());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageItalian = () => {
     dispatch(languageActions.italian());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageDutsch = () => {
     dispatch(languageActions.deutsch());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguagePortu = () => {
     dispatch(languageActions.portgues());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageJapanese = () => {
     dispatch(languageActions.japanese());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
   const handleChangeLanguageArabic = () => {
     dispatch(languageActions.persian());
-    dispatch(drawerActions.drawerClose());
+    handleCloseDrawer();
   };
 
   return (
     <div className={classes.wrapper}>
       <div
         className={`${classes.backdrop} ${
-          drawerOpen ? classes.visible : classes.hidden
+          !drawerOpen ? classes.hidden : classes.visible
         }`}
         onClick={handleCloseDrawer}
       ></div>
       <div
         className={`${classes.drawer_container} ${
-          drawerOpen ? classes.open : classes.close
+          !drawerOpen ? classes.close : classes.open
         }`}
       >
         <div className={classes.button_btn}>
@@ -213,7 +212,11 @@ const handleCloseDrawer =()=>{
             فارسی
           </li>
         </ul>
-        <button type="button" className={classes.close_button} onClick={handleCloseDrawer}>
+        <button
+          type="button"
+          className={classes.close_button}
+          onClick={handleCloseDrawer}
+        >
           <img src={data.drawer.x} alt="" />
         </button>
       </div>

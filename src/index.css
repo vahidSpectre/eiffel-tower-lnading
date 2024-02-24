@@ -3,8 +3,8 @@
   --color-grey-1: #212121;
   --color-grey-2: #222222;
   --color-grey-3: #555;
-  --color-pink-1: #e8e4e4;
-  --color-pink-2: #e7e7e7;
+  --color-pink-1: rgb(232, 228, 228);
+  --color-pink-2: rgb(232, 232, 232);
 
   --max-width: 1200px;
 }
