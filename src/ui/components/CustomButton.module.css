@@ -1,6 +1,6 @@
 .button {
   width: fit-content;
-  padding: 0.4rem 1rem;
+  padding: 0.3rem 0.8rem;
   background: linear-gradient(
     to right,
     rgba(219, 64, 68, 0.9),
@@ -11,11 +11,14 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: all 0s;
-  font-size: 16px;
   white-space: pre-wrap;
   outline: 0;
   border: none;
+  transition: all 0s;
+}
+.button div {
+  margin: 0 0.3rem;
+  font-size: 16px;
 }
 .button_border {
   border: 2px solid rgba(236, 104, 81, 0.9);
@@ -23,6 +26,7 @@
 .button::before {
   content: "\276F";
   margin-right: 0.5rem;
+  transform: scale(0.7);
 }
 .button:hover {
   background: white;

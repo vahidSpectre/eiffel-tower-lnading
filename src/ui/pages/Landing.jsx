@@ -71,14 +71,22 @@ const Landing = () => {
           <div className={classes.timing_content_wrapper}>
             <div
               className={classes.timing_sheet}
-              style={{ transform: `translateY(${timingContentIndex * 100/2}%)` }}
+              style={{
+                transform: `translateY(${(timingContentIndex * 100) / 2}%)`,
+              }}
             >
               <div className={classes.timing_content}>asdf</div>
               <div className={classes.timing_content}>1234</div>
             </div>
           </div>
-          <Thumb onClick={()=>setTimingContentIndex(0)} active={timingContentIndex===0?true:false}/>
-          <Thumb onClick={()=>setTimingContentIndex(-1)} active={timingContentIndex===-1?true:false}/>
+          <Thumb
+            onClick={() => setTimingContentIndex(0)}
+            active={timingContentIndex === 0 ? true : false}
+          />
+          <Thumb
+            onClick={() => setTimingContentIndex(-1)}
+            active={timingContentIndex === -1 ? true : false}
+          />
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}

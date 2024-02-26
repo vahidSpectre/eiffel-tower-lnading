@@ -32,7 +32,7 @@ function App() {
       fallbackLng: "en",
       backend: {
         loadPath:
-          "https://vahidspectre.github.io/eiffel-tower-lnading/assets/locales/{{lng}}/translation.json",
+          "http://localhost:3000/eiffel-tower-lnading/assets/locales/{{lng}}/translation.json",
       },
       detection: {
         order: ["path", "localStorage", "cookie", "htmlTag", "subdomain"],
