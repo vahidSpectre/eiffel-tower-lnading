@@ -1,0 +1,19 @@
+.thumb {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.thumb_active {
+  background-color: var(--color-orange-1);
+  border-color: var(--color-orange-1);
+}
+@media screen and (max-width: 900px) {
+  .thumb {
+    width: 2rem;
+    height: 2rem;
+  }
+}

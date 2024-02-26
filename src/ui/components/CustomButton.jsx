@@ -2,13 +2,13 @@ import React from "react";
 
 import classes from "./CustomButton.module.css";
 
-const CustomButton = ({ text, style, border, onClick }) => {
+const CustomButton = ({ text, className, border, onClick }) => {
   return (
     <button
       type="button"
       className={`${classes.button} ${
         border ? classes.button_border : ""
-      } ${style}`}
+      } ${className}`}
       onClick={onClick}
     >
       {text}

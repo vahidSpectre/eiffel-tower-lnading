@@ -18,6 +18,21 @@
   overflow: hidden;
   box-shadow: inset 0px -10px 30px 10px black;
 }
+.timing_content_wrapper {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  transition: all 0.5s;
+}
+.timing_sheet {
+  width: 100%;
+  height: fit-content;
+}
+.timing_content {
+  width: 100%;
+  height: 4rem;
+}
 .player_wrapper {
   min-height: 30vh;
 }
@@ -40,7 +55,7 @@
   background-color: transparent;
 }
 .timing_text {
-  width: 50%;
+  width: 57%;
 }
 .timing_secondary {
   width: 12.5%;
@@ -103,17 +118,31 @@
 .discover_btn {
   margin-bottom: 2rem;
 }
-.now{
+.now {
   overflow: hidden;
 }
-.now_thum_container{
+.now_thum_container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.now_thum_container > *{
+.now_thum_container > * {
   width: 28% !important;
 }
+.news_card {
+  background: url("../../../public/assets/images/home-actus-bg.jpg") center
+    no-repeat;
+  background-size: cover;
+  margin-top: 2rem;
+  padding-bottom: 2rem !important;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
 .dontmiss_container {
   background: url(../../../public/assets/images/home-dontmiss-bg.jpg) no-repeat
     0 0;
@@ -213,6 +242,9 @@
     row-gap: 1.5rem;
     padding: 2.5rem;
   }
+  .news_card {
+    padding: 0 1rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .journytop {
@@ -231,6 +263,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+  .now_thum_container {
+    flex-direction: column;
+  }
+  .now_thum_container > * {
+    width: 80% !important;
+    margin: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -274,7 +313,8 @@
     grid-template-rows: repeat(3, 1fr);
     padding: 5rem;
   }
-  .event_text_container h3,.event_text_container p{
+  .event_text_container h3,
+  .event_text_container p {
     width: 100%;
     text-align: center;
     padding: 0 2rem;

@@ -15,14 +15,16 @@ import EventCard from "../components/EventCard";
 import Photo from "../components/Photo";
 import { useTranslation } from "react-i18next";
 import CombinedThumnail from "../components/CombinedThumnail";
+import Slider from "../components/Slider";
+import Thumb from "../components/Thumb";
 
 const Landing = () => {
   const [loadingVideo, setLoadingVideo] = useState(true);
   const [isRtl, setIsRtl] = useState(false);
+  const [timingContentIndex, setTimingContentIndex] = useState(0);
 
   const navigate = useNavigate();
-    const language = localStorage.getItem("i18nextLng");
-
+  const language = localStorage.getItem("i18nextLng");
 
   const { t } = useTranslation();
 
@@ -66,7 +68,17 @@ const Landing = () => {
           className={classes.timing_text}
           title={`${t("timing_title_1")}`}
         >
-          xzcv
+          <div className={classes.timing_content_wrapper}>
+            <div
+              className={classes.timing_sheet}
+              style={{ transform: `translateY(${timingContentIndex * 100/2}%)` }}
+            >
+              <div className={classes.timing_content}>asdf</div>
+              <div className={classes.timing_content}>1234</div>
+            </div>
+          </div>
+          <Thumb onClick={()=>setTimingContentIndex(0)} active={timingContentIndex===0?true:false}/>
+          <Thumb onClick={()=>setTimingContentIndex(-1)} active={timingContentIndex===-1?true:false}/>
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
@@ -123,7 +135,7 @@ const Landing = () => {
               onClick={() =>
                 navigate(`/${localStorage.getItem("i18nextLng")}/discover`)
               }
-              style={classes.discover_btn}
+              className={classes.discover_btn}
             />
           </div>
         </div>
@@ -153,8 +165,15 @@ const Landing = () => {
         </span>
       </Section>
 
-      <Section className={classes.news}>
+      <Section className={classes.news} cardProps={classes.news_card}>
         <UnderlinkedText text={`${t("news_title")}`} />
+
+        <Slider
+          imgArray={[data.news.pic_1, data.news.pic_2]}
+          titleArray={[t("news_1_title"), t("news_2_title")]}
+          captionArray={[t("news_1_caption"), t("news_2_caption")]}
+        />
+
         <CustomButton
           text={`${t("all_news")}`}
           border={true}
@@ -229,7 +248,7 @@ const Landing = () => {
 
       <Section className={classes.socialmedia}>
         <UnderlinkedText text={`${t("media_title")}`} />
-        <div className={classes.gallery}>
+        {/* <div className={classes.gallery}>
           <Photo src={data.background_cover} />
           <Photo src={data.background_cover} />
           <Photo src={data.background_cover} />
@@ -240,7 +259,7 @@ const Landing = () => {
           <Photo src={data.background_cover} />
           <Photo src={data.background_cover} />
           <Photo src={data.background_cover} />
-        </div>
+        </div> */}
         <CustomButton
           text={`   ${t("all_media")}   `}
           border={true}

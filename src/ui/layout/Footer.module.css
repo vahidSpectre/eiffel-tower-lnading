@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: space-around;
 }
+.buy_button{
+  margin-left: 10rem;
+}
 .footer_content p {
   text-align: center;
   position: absolute;

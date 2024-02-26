@@ -20,7 +20,7 @@ const Footer = () => {
         <Section className={classes.footer_content}>
           <img src={data.footer_svgs.clock} alt="clock" />
           <p>{`${t("save_time")}`}</p>
-          <CustomButton text={`${t("buy_ticket")}`} />
+          <CustomButton className={classes.buy_button} text={`${t("buy_ticket")}`} />
         </Section>
       </section>
       <section
