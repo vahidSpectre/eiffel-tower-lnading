@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Header from "../layout/Header";
 import CustomButton from "../components/CustomButton";
 
@@ -22,6 +22,7 @@ const Landing = () => {
   const [loadingVideo, setLoadingVideo] = useState(true);
   const [isRtl, setIsRtl] = useState(false);
   const [timingContentIndex, setTimingContentIndex] = useState(0);
+  const [activeBarState, setActiveBarState] = useState(0);
 
   const navigate = useNavigate();
   const language = localStorage.getItem("i18nextLng");
@@ -32,6 +33,23 @@ const Landing = () => {
     language === "fa" ? setIsRtl(true) : setIsRtl(false);
   }, [language, isRtl]);
 
+  useEffect(() => {
+    if (activeBarState === 0) {
+      setActiveBarState(Math.random().toFixed(2) * 100);
+    }
+    console.log(activeBarState);
+  }, [activeBarState]);
+
+  const colorDif = (i) => {
+    if (i <= 33) return "green";
+    if (i > 67) return "red";
+    if (34 < i <= 66) return "yellow";
+  };
+  const textDif = (i) => {
+    if (i <= 33) return "Low";
+    if (i > 67) return "High";
+    if (34 < i <= 66) return "Normal";
+  };
   return (
     <div className={classes.main_container}>
       <Header locale={true} />
@@ -72,21 +90,35 @@ const Landing = () => {
             <div
               className={classes.timing_sheet}
               style={{
-                transform: `translateY(${(timingContentIndex * 100) / 2}%)`,
+                transform: `translate3d(0,${
+                  (timingContentIndex * 100) / 2
+                }%,0)`,
               }}
             >
-              <div className={classes.timing_content}>asdf</div>
-              <div className={classes.timing_content}>1234</div>
+              <div
+                className={classes.timing_content}
+                style={{ direction: `${isRtl ? "rtl" : "ltr"}` }}
+              >
+                {t("timing_content_1")}
+              </div>
+              <div
+                className={classes.timing_content}
+                style={{ direction: `${isRtl ? "rtl" : "ltr"}` }}
+              >
+                {t("timing_content_2")}
+              </div>
             </div>
           </div>
-          <Thumb
-            onClick={() => setTimingContentIndex(0)}
-            active={timingContentIndex === 0 ? true : false}
-          />
-          <Thumb
-            onClick={() => setTimingContentIndex(-1)}
-            active={timingContentIndex === -1 ? true : false}
-          />
+          <span className={classes.thumb_wrapper}>
+            <Thumb
+              onClick={() => setTimingContentIndex(0)}
+              active={timingContentIndex === 0 ? true : false}
+            />
+            <Thumb
+              onClick={() => setTimingContentIndex(-1)}
+              active={timingContentIndex === -1 ? true : false}
+            />
+          </span>
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
@@ -94,7 +126,18 @@ const Landing = () => {
           arrow={true}
           animate={true}
         >
-          hello
+          <div className={classes.timing_bar}>
+            <div
+              className={classes.timing_bar_active}
+              style={{
+                width: `${activeBarState}%`,
+                backgroundColor: `${colorDif(activeBarState)}`,
+              }}
+            ></div>
+          </div>
+          <p style={{ color: `${colorDif(activeBarState)}` }}>
+            Attendance : {textDif(activeBarState)}
+          </p>
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
@@ -102,16 +145,14 @@ const Landing = () => {
           arrow={true}
           animate={true}
         >
-          hello
+          09:30 - 23:00
         </HeroTimeingWrapper>
         <HeroTimeingWrapper
           className={classes.timing_secondary}
           title={`${t("timing_title_4")}`}
           arrow={true}
           animate={true}
-        >
-          hello
-        </HeroTimeingWrapper>
+        ></HeroTimeingWrapper>
       </Section>
 
       <Section className={classes.events} cardProps={classes.events_card}>
@@ -254,7 +295,7 @@ const Landing = () => {
         </div>
       </Section>
 
-      <Section className={classes.socialmedia}>
+      <Section className={classes.socialmedia} cardProps={classes.social_card}>
         <UnderlinkedText text={`${t("media_title")}`} />
         {/* <div className={classes.gallery}>
           <Photo src={data.background_cover} />
@@ -275,6 +316,31 @@ const Landing = () => {
             navigate(`/${localStorage.getItem("i18nextLng")}/photos`)
           }
         />
+        <div className={classes.social_wrapper}>
+          <h3>Follow us on social networks :</h3>
+          <div className={classes.social_svg_wrapper}>
+            <Svg
+              imageProps={classes.social_svg}
+              src={data.footer_svgs.facebook.src}
+              caption={data.footer_svgs.facebook.title}
+            />
+            <Svg
+              imageProps={classes.social_svg}
+              src={data.footer_svgs.x.src}
+              caption={data.footer_svgs.x.title}
+            />
+            <Svg
+              imageProps={classes.social_svg}
+              src={data.footer_svgs.instagram.src}
+              caption={data.footer_svgs.instagram.title}
+            />
+          </div>
+          <ul>
+            <li>Compentitions</li>
+            <li>Exclusive photos</li>
+            <li>All the news on the Eiffel Tower</li>
+          </ul>
+        </div>
       </Section>
       <Footer />
     </div>

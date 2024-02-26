@@ -50,13 +50,13 @@
 }
 .text_wrapper {
   position: absolute;
-  width: 20rem;
-  height: 10rem;
+  width: 25rem;
+  height: 15rem;
   background-color: white;
   z-index: 100000000;
   right: 0;
   color: black;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
   border-radius: 5px;
 }
 .text_wrapper h3 {
@@ -69,19 +69,6 @@
 }
 .rtl{
   direction: rtl;
-}
-.thumb {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 2px solid white;
-  margin: 0 0.5rem;
-  cursor: pointer;
-}
-.thumb_active {
-  background-color: var(--color-orange-1);
-  border-color: var(--color-orange-1);
 }
 @media screen and (max-width: 1024px) {
 }
@@ -103,7 +90,7 @@
     width: 100%;
     padding: 1rem 0.5rem;
     background-color: transparent;
-    height: 5rem;
+    height: fit-content;
   }
   .text_wrapper h3 , .text_wrapper p {
     color: white;
@@ -112,5 +99,11 @@
   .thumb{
     width: 2rem;
     height: 2rem;
+  }
+  .content_text{
+    flex:  0 0 auto;
+  }
+  .dot_container{
+    padding:0 0 1rem 0;
   }
 }

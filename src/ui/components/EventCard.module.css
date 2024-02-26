@@ -28,4 +28,8 @@
   .image_container{
     width: 100%;
   }
+  .title,.caption{
+    max-width: 100%;
+    text-align: center;
+  }
 }

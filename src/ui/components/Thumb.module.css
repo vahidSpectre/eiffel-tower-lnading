@@ -4,7 +4,7 @@
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid white;
-  margin: 0 0.5rem;
+  margin: 0.3rem;
   cursor: pointer;
 }
 .thumb_active {
@@ -13,7 +13,7 @@
 }
 @media screen and (max-width: 900px) {
   .thumb {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
